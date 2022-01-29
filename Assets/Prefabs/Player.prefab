@@ -423,5 +423,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 1575537951005528791}
-  _speed: 5
+  _speed: 7
   _turnSpeed: 360
+  _rangeWeapon: {fileID: 0}

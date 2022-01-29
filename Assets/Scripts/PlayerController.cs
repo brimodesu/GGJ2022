@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 _input;
 
+    public RangeWeaponController _rangeWeapon;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,10 @@ public class PlayerController : MonoBehaviour
     {
         GatherInput();
         Look();
+        if (Input.GetMouseButtonDown(0))
+        {
+            _rangeWeapon.Fire(transform);
+        }
     }
 
     private void FixedUpdate()
