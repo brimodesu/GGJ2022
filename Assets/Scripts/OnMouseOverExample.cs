@@ -5,11 +5,6 @@ using UnityEngine;
 
 public class OnMouseOverExample : MonoBehaviour
 {
-    
-    void OnMouseDown()
-    {
-    
-    }
 
     void OnMouseUp()
     {

@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
 
     public RangeWeaponController _rangeWeapon;
 
+    public bool hasConcentration = true;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         GatherInput();
         Look();
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && _rangeWeapon.gameObject.activeInHierarchy)
         {
             _rangeWeapon.Fire(transform);
         }
