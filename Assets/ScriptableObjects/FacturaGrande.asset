@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ee35e4b271c478d9b1caa37ce262ef, type: 3}
-  m_Name: Money
+  m_Script: {fileID: 11500000, guid: 26cb3beeaa2aa4a17af4a28b60f66a93, type: 3}
+  m_Name: FacturaGrande
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6146014912860875729, guid: 6581d2ffd17884befbb359313be3730f, type: 3}
-  damage: 25
-  speed: 11
+  Health: 100
+  attack: 200

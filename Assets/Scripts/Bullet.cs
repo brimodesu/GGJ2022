@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
 
 
     public Vector3 direction = Vector3.zero;
+    public int damage;
     public float speed;
     public bool canDestroy = false;
     
@@ -34,6 +35,10 @@ public class Bullet : MonoBehaviour
             gameObject.SetActive(false);
             canDestroy = false;
             StopCoroutine(DestroyBullet());
+        }
+        else if(collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponent<EnemyController>().ReceiveDamage(damage);
         }
     }
 

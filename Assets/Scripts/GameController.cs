@@ -10,7 +10,8 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private float currentPlayerMoney = 0f;
     public TMP_Text _currentMoney;
-    
+
+
     public void updateMoney( float money)
     {
         currentPlayerMoney += money;
@@ -20,6 +21,7 @@ public class GameController : MonoBehaviour
     public void characterLostConcentration()
     {
         SceneManager.LoadScene("SampleScene",LoadSceneMode.Additive);
+        
         
     }
 }

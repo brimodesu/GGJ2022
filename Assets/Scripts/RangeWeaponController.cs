@@ -27,6 +27,7 @@ public class RangeWeaponController : MonoBehaviour
         {
             GameObject obj = Instantiate(bullet.prefab);
             obj.GetComponent<Bullet>().speed = bullet.speed;
+            obj.GetComponent<Bullet>().damage = bullet.damage;
             obj.SetActive(false);
             pooledBullets.Add(obj);
         }

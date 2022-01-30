@@ -11,7 +11,8 @@ public class RestaurantLevelController : MonoBehaviour
     public int focus = 100;
 
     public Image focusImage;
-    
+
+    public GameObject table;
     void Start()
     {
         StartCoroutine(DecreaseConcentration());
@@ -25,6 +26,7 @@ public class RestaurantLevelController : MonoBehaviour
             focusImage.fillAmount = focus / 100f;
             if (focus < 0)
             {
+                table.SetActive(false);
                 GameController.characterLostConcentration();
             }
 
