@@ -27,6 +27,11 @@ public class GameController : MonoBehaviour
     public void updateMoney( float money)
     {
         currentPlayerMoney += money;
+        if (money <= 0)
+        {
+            _currentMoney.color = Color.red;
+        }
+
         _currentMoney.text = $"Q {currentPlayerMoney.ToString("0,0.00")}";
     }
 
