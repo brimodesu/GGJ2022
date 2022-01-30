@@ -56,11 +56,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 0a0e8af2869fa45f78e25460db578482, type: 3}
+        m_Texture: {fileID: 2800000, guid: f88462899b8de404f9e728e85afbd163, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D_1:
-        m_Texture: {fileID: 2800000, guid: 94c473c9137744d7eabd829f1150da8d, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -75,10 +75,10 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Health: 1
+    - _Health: 0.271
     - _Metallic: 0
     - _Mode: 0
-    - _Noise_Scale: 35.56
+    - _Noise_Scale: 171.01
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
@@ -88,7 +88,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 1}
-    - _Edge_Color: {r: 0.3373006, g: 0.83137256, b: 0, a: 0}
+    - _Edge_Color: {r: 0.04688587, g: 0, b: 0.1792453, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &3950277586463912691

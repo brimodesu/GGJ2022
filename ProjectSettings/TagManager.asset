@@ -8,6 +8,7 @@ TagManager:
   - Table
   - Wall
   - Enemy
+  - Map
   layers:
   - Default
   - TransparentFX

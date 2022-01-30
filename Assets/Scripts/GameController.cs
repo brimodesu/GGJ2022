@@ -14,6 +14,8 @@ public class GameController : MonoBehaviour
     public TMP_Text _currentMoney; 
     public bool playerCanShoot = false;
 
+
+    public GameObject space;
     private void Awake()
     {
         if (instance == null)
@@ -32,6 +34,7 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene",LoadSceneMode.Additive);
         playerCanShoot = true;
+        space.SetActive(true); 
 
     }
 }

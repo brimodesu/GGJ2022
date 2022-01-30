@@ -6,23 +6,25 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public ScriptableEnemy enemyData;
-    
-    public int currentHealth= 0;
+
+    public int currentHealth = 0;
 
     public event Action<int, int> OnHealthChanged;
-    
+
     void Start()
     {
         changeHealth(enemyData.Health);
     }
-
-    private void Update()
-    {
-    }
+    
 
     public void ReceiveDamage(int damageAmount)
     {
-        changeHealth( Mathf.Max(currentHealth - damageAmount, 0));
+        var newHealth = Mathf.Max(currentHealth - damageAmount, 0);
+        changeHealth(newHealth);
+        if (newHealth <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public void changeHealth(int value)
@@ -30,5 +32,4 @@ public class EnemyController : MonoBehaviour
         currentHealth = value;
         OnHealthChanged?.Invoke(currentHealth, enemyData.Health);
     }
-    
 }

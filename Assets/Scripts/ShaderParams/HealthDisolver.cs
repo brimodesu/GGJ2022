@@ -6,7 +6,7 @@ using UnityEngine;
 public class HealthDisolver : MonoBehaviour
 {
    [SerializeField] private EnemyController EnemyController;
-   [SerializeField] private Renderer[] healthRenderers = new Renderer[0];
+   [SerializeField] private SkinnedMeshRenderer[] healthRenderers = new SkinnedMeshRenderer[0];
 
    private float targetDissolveValue = 1f;
    private float currentDissolveValue = 1f;
@@ -14,12 +14,24 @@ public class HealthDisolver : MonoBehaviour
    private void OnEnable() => EnemyController.OnHealthChanged += HandleHealthChanged;
    private void OnDisable() => EnemyController.OnHealthChanged -= HandleHealthChanged;
 
+   private void Start()
+   {
+      EnemyController = GetComponent<EnemyController>();
+   }
+
    private void Update()
    {
       currentDissolveValue = Mathf.Lerp(currentDissolveValue, targetDissolveValue,2f * Time.deltaTime);
       foreach (Renderer render in healthRenderers)
       {
-         render.material.SetFloat("_Health", currentDissolveValue);
+         foreach (var material in render.materials)
+         {
+            if(material.shader.name.Equals("Shader Graphs/Disolve"))
+            {
+               material.SetFloat("_Health", currentDissolveValue);
+            }
+         }
+          //.SetFloat("_Health", currentDissolveValue);
       }
    }
 
