@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class FinalBossRoomController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public List<GameObject> bosses;
 
-    // Update is called once per frame
-    void Update()
+    public void ActivateBosses()
     {
-        
+        foreach (var boss in bosses)
+        {
+            boss.SetActive(true);
+        }
     }
 }
