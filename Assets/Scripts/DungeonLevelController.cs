@@ -14,7 +14,10 @@ public class DungeonLevelController : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
-        player._rangeWeapon.gameObject.SetActive(true);
+        GameObject weapon = player._rangeWeapon.gameObject;
+        weapon.SetActive(true);
+        weapon.transform.SetParent(player._playerModel.weaponSpawn,true);
+        weapon.transform.position = player._playerModel.weaponSpawn.transform.position;
         isometricCamera.Follow = player.transform;
     }
 

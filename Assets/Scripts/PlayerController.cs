@@ -19,21 +19,16 @@ public class PlayerController : MonoBehaviour
     private Vector3 _input;
 
     public RangeWeaponController _rangeWeapon;
-
+    public PlayerModelController _playerModel;
     public bool hasConcentration = true;
     
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()
     {
         GatherInput();
         Look();
-        if (Input.GetMouseButtonDown(0) && _rangeWeapon.gameObject.activeInHierarchy)
+        if (Input.GetMouseButtonDown(0) && _rangeWeapon.gameObject.activeInHierarchy && GameController.instance.playerCanShoot)
         {
             _rangeWeapon.Fire(transform);
         }
@@ -47,6 +42,14 @@ public class PlayerController : MonoBehaviour
     void GatherInput()
     {
         _input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        if (_input == Vector3.zero)
+        {
+            _playerModel.Animator.SetBool("Running",false);
+        }
+        else
+        {
+            _playerModel.Animator.SetBool("Running",true);
+        }
     }
 
     void Look()
@@ -68,5 +71,6 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         _rb.MovePosition(transform.position + (transform.forward * _input.normalized.magnitude) * _speed * Time.deltaTime);
+        
     }
 }
