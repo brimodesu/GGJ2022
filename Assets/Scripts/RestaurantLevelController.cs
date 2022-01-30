@@ -13,6 +13,8 @@ public class RestaurantLevelController : MonoBehaviour
     public Image focusImage;
 
     public GameObject table;
+    public List<NPC> listNPC;
+    
     void Start()
     {
         StartCoroutine(DecreaseConcentration());
@@ -28,6 +30,10 @@ public class RestaurantLevelController : MonoBehaviour
             {
                 table.SetActive(false);
                 GameController.characterLostConcentration();
+                foreach (var npc in listNPC)
+                {
+                    npc.setScared();
+                }
             }
 
             yield return new WaitForSeconds(1f);

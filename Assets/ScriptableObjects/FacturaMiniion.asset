@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26cb3beeaa2aa4a17af4a28b60f66a93, type: 3}
-  m_Name: FacturaGrande
+  m_Name: FacturaMiniion
   m_EditorClassIdentifier: 
-  Health: 500
-  attack: 200
+  Health: 100
+  attack: 50

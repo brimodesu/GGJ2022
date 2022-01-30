@@ -30,15 +30,20 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Wall"))
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Map"))
         {
-            gameObject.SetActive(false);
+      
             canDestroy = false;
             StopCoroutine(DestroyBullet());
+            gameObject.SetActive(false);
         }
         else if(collision.gameObject.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<EnemyController>().ReceiveDamage(damage);
+            canDestroy = false;
+            StopCoroutine(DestroyBullet());
+            gameObject.SetActive(false);
+            
         }
     }
 
