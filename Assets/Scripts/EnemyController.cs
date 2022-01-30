@@ -32,4 +32,14 @@ public class EnemyController : MonoBehaviour
         currentHealth = value;
         OnHealthChanged?.Invoke(currentHealth, enemyData.Health);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            var player = collision.gameObject.GetComponent<PlayerController>();
+            player.ReceiveDamage(enemyData.attack);
+        }
+        
+    }
 }
