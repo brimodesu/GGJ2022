@@ -75,10 +75,10 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Health: 0.271
+    - _Health: 0.518
     - _Metallic: 0
     - _Mode: 0
-    - _Noise_Scale: 171.01
+    - _Noise_Scale: 137.6
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0

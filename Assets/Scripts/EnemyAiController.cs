@@ -78,7 +78,6 @@ public class EnemyAiController : MonoBehaviour
         if (!alreadyAttacked)
         {
             // ATTACK ZONE
-            Debug.Log("attack");
             //END ATTACK 
             
             alreadyAttacked = true;
