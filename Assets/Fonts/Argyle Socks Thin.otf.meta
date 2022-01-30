@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0e3d2dc07de2cae4c9390973952259e9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Argyle Socks
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b49bdf43cb5cbc94989f4fe6ca5f912f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
