@@ -9,7 +9,7 @@ public class RangeWeaponController : MonoBehaviour
     public ScriptableBullet bullet;
     public int _bulletsAvailable = 20;
     public Transform spawnArea;
-    
+    public AudioSource bulletSound; 
     void Start()
     {
         CreateBullets(_bulletsAvailable);
@@ -48,6 +48,7 @@ public class RangeWeaponController : MonoBehaviour
 
     public void Fire(Transform origin)
     {
+        bulletSound.Play();
         var pooledBullet = GetPooledObject();
         pooledBullet.transform.position = spawnArea.position;
         
